@@ -13,7 +13,7 @@
 	</engines>
 
     <js-module src="www/DeviceAudioService.js" name="DeviceAudioService">
-        <clobbers target="window.plugins.DeviceAudioService" />
+        <clobbers target="DeviceAudioService" />
     </js-module>
 
      <!-- ios -->
