@@ -120,13 +120,13 @@ NSString* STATUS_ALL_AUDIO_REMOVED = @"Status: all audio has been removed";
 	NSDictionary *jsonObj;
 	
 	if ([(DeviceAudioServiceAudioItem *)[registeredAudioElements valueForKey:anId] shouldResumePlayback] == YES) {
-		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary: jsonObj];
 		jsonObj = [[NSDictionary alloc] initWithObjectsAndKeys:@"true", @"shouldResumePlayback",nil];
+		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary: jsonObj];
 	}
 	else
 	{
-		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary: jsonObj];
 		jsonObj = [[NSDictionary alloc] initWithObjectsAndKeys:@"false", @"shouldResumePlayback",nil];
+		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary: jsonObj];
 	}
 
 	[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
