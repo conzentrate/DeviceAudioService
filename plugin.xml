@@ -9,7 +9,7 @@
 	<author>Developed by Conzentrate ApS</author>
 	<license>MIT</license>
 	<engines>
-	    <engine name="cordova" version=">=3.3.1" />
+	    <engine name="cordova" version=">=3.3.0" />
 	</engines>
 
     <js-module src="www/DeviceAudioService.js" name="DeviceAudioService">
