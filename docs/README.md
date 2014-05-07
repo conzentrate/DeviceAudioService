@@ -39,10 +39,10 @@ Calling the 'addAudioWithIdAndUrl' method could then look like:
 ```
 
 #Common usage:
-1) First Use the addAudioWithIdAndUrl() method to preload one or more audio files
+1. First Use the addAudioWithIdAndUrl() method to preload one or more audio files
    Note: Make sure to wait for phonegap deviceready event before atteptimpting to load assets
-2) Play and/or pause audio asset(s) via the playAudioWithId and pauseAudioWithId methods. 
-3) When done, purge the preloaded audio files via the removeAllAudio method
+2. Play and/or pause audio asset(s) via the playAudioWithId and pauseAudioWithId methods. 
+3. When done, purge the preloaded audio files via the removeAllAudio method
 
 #API methods:
 **addAudioWithIdAndUrl**: function ( anId, aUrl, aSuccessCallback, aFailureCallback )
