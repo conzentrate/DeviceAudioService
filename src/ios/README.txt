@@ -27,6 +27,22 @@ DeviceAudioService.js
 Note: If you are using automated reference counting (ARC), you may need to remove retain/release statements.
 
 Usage:
+You may call each of the API methods below by using the following template:
+	cordova.exec(
+		// Register the callback handler
+		function(data) {
+			// Stuff to do on successfull callback
+		},
+		// Register the errorHandler
+		function(err) {
+			// Stuff to do when an error occurs.
+		},
+		'DeviceAudioService',
+		'AN_API_METHOD',
+		[ 'ONE_OR_MORE_PARAMETERS_TO_PASS_TO_THE_METHOD' ]
+	);
+
+
 1) Use the addAudioWithIdAndUrl() method to preload one or more audio files
    Note: Make sure to wait for phonegap deviceready event before atteptimpting to load assets
 2) Play and/or pause audio asset(s) via the playAudioWithId and pauseAudioWithId methods. 
