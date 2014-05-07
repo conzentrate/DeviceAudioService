@@ -39,24 +39,24 @@ Calling the 'addAudioWithIdAndUrl' method could then look like:
 ```
 
 #Common usage:
-1. First Use the **addAudioWithIdAndUrl** method to preload one or more audio files
+1. First Use the **addAudioWithIdAndUrl** method to preload one or more audio files  
    Note: Make sure to wait for phonegap deviceready event before atteptimpting to load assets
 2. Play and/or pause audio asset(s) via the **playAudioWithId** and **pauseAudioWithId** methods. 
 3. When done, purge the preloaded audio files via the **removeAllAudio** method
 
 #API methods:
 ##addAudioWithIdAndUrl:
-params:
-
-**anId** - a unique string identifier referencing the audio file.
-
-**aUrl** - the Url to the audio file to be preloaded. The file will be played back via the AVPlayer iOS Class.
-
-**aSuccessCallback** - success callback.
-
-**aFailureCallback** - error/fail callback.
+**Params:**  
+* **anId**  
+A unique string identifier referencing the audio file.  
+* **aUrl**  
+The Url to the audio file to be preloaded. The file will be played back via the AVPlayer iOS Class.  
+* **aSuccessCallback**  
+Success callback.  
+* **aFailureCallback**  
+Error/fail callback.  
 	
-detail:
+**Detail:**
 The method will call the success callback when the iOS Cocoa AVPlayerStatusReadyToPlay status is triggered. Before attempting to play back the audio file You should wait for the success callback. The method will call the failure callback when the AVPlayerStatusFailed is triggered.
 
 **playAudioWithId**: function (anId, aSuccessCallback, aFailureCallback) {
