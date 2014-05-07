@@ -45,16 +45,19 @@ Calling the 'addAudioWithIdAndUrl' method could then look like:
 3. When done, purge the preloaded audio files via the **removeAllAudio** method
 
 #API methods:
+##addAudioWithIdAndUrl:
+params:
 
-**addAudioWithIdAndUrl**: function ( anId, aUrl, aSuccessCallback, aFailureCallback )
+**anId** - a unique string identifier referencing the audio file.
 
-	params: anId - a unique string identifier referencing the audio file
-		aUrl - the Url to the audio file to be preloaded. The file will be played back via the AVPlayer iOS Class
+**aUrl** - the Url to the audio file to be preloaded. The file will be played back via the AVPlayer iOS Class.
 
-		aSuccessCallback - success callback function
+**aSuccessCallback** - success callback.
 
-		aFailureCallback - error/fail callback function
-	detail:	The method will call the success callback when the iOS Cocoa AVPlayerStatusReadyToPlay status is triggered. Before attempting to play back the audio file You should wait for the success callback. The method will call the failure callback when the AVPlayerStatusFailed is triggered.
+**aFailureCallback** - error/fail callback.
+	
+detail:
+The method will call the success callback when the iOS Cocoa AVPlayerStatusReadyToPlay status is triggered. Before attempting to play back the audio file You should wait for the success callback. The method will call the failure callback when the AVPlayerStatusFailed is triggered.
 
 **playAudioWithId**: function (anId, aSuccessCallback, aFailureCallback) {
 	params: anId - a unique string identifier referencing the audio file
