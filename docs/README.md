@@ -5,7 +5,7 @@ To be updated.
 
 #Calling the API methods:
 You may call each of the API methods below by using the following template:
-```Javascript
+```javascript
 	cordova.exec(
 		// Register the callback handler
 		function(data) {
@@ -22,8 +22,8 @@ You may call each of the API methods below by using the following template:
 ```
 
 Calling the 'addAudioWithIdAndUrl' method could then look like:
-```Javascript
-  cordova.exec(
+```javascript
+	cordova.exec(
 		// Register the callback handler
 		function(data) {
 			// Stuff to do on successfull callback
@@ -45,8 +45,8 @@ Calling the 'addAudioWithIdAndUrl' method could then look like:
 3. When done, purge the preloaded audio files via the **removeAllAudio** method
 
 #API methods:
-**addAudioWithIdAndUrl**: function ( anId, aUrl, aSuccessCallback, aFailureCallback )
 
+**addAudioWithIdAndUrl**: function ( anId, aUrl, aSuccessCallback, aFailureCallback )
 	params: anId - a unique string identifier referencing the audio file
 			aUrl - the Url to the audio file to be preloaded. The file will be played back via the AVPlayer iOS Class
 
