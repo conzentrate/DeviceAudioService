@@ -59,40 +59,65 @@ Error/fail callback.
 **Detail:**
 The method will call the success callback when the iOS Cocoa AVPlayerStatusReadyToPlay status is triggered. Before attempting to play back the audio file You should wait for the success callback. The method will call the failure callback when the AVPlayerStatusFailed is triggered.
 
-**playAudioWithId**: function (anId, aSuccessCallback, aFailureCallback) {
-	params: anId - a unique string identifier referencing the audio file
-			aSuccessCallback - success callback function
-			aFailureCallback - error/fail callback function
-	detail:	
-			Plays an audio file previously preloaded via the method addAudioWithIdAndUrl
+##playAudioWithId
+**Params:**
+* **anId**  
+Unique string identifier referencing the audio file.
+* **aSuccessCallback**
+Success callback.
+* **aFailureCallback**  
+Error/fail callback function
 
-**pauseAudioWithId**: function (anId, aSuccessCallback, aFailureCallback) {
-	params: anId - a unique string identifier referencing the audio file
-			aSuccessCallback - success callback function
-			aFailureCallback - error/fail callback function
-	detail:	
-			Pauses an audio file previously preloaded via the method addAudioWithIdAndUrl
+**Detail:**  
+Plays an audio file previously preloaded via the method addAudioWithIdAndUrl
 
-**audioWithIdIsPaused**: function (anId, aSuccessCallback, aFailureCallback) {
-	params: anId - a unique string identifier referencing the audio file
-			aSuccessCallback - success callback function
-			aFailureCallback - error/fail callback function
-	detail:	
-			Tests if an audio file is currently paused. If the audio file has not previously been issued a play command via playAudioWithId this test will fail.
+#pauseAudioWithId
+**Params:**
+* **anId**  
+Unique string identifier referencing the audio file.
+* **aSuccessCallback**
+Success callback.
+* **aFailureCallback**  
+Error/fail callback function
 
-**audioWithIdShouldResumePlayback**: function (anId, aSuccessCallback, aFailureCallback) {
-	params: anId - a unique string identifier referencing the audio file
-			aSuccessCallback - success callback function
-			aFailureCallback - error/fail callback function
-	detail:	
-			Tests if a previously paused audio file should be resumed. The criteria are: If the currentTime of the AVPlayer instance is > 0 and the audio has previously been issued a pauseAudioWithId command the method will return successful.
+**Detail:**  
+Pauses an audio file previously preloaded via the method addAudioWithIdAndUrl
 
-**removeAllAudio**: function (aSuccessCallback, aFailureCallback) {
-	params: anId - a unique string identifier referencing the audio file
-			aSuccessCallback - success callback function
-			aFailureCallback - error/fail callback function
-	detail:	
-			Purges all preloaded audio files and empties the dictionary of registered unique id's
+#audioWithIdIsPaused
+**Params:**
+* **anId**  
+Unique string identifier referencing the audio file.
+* **aSuccessCallback**
+Success callback.
+* **aFailureCallback**  
+Error/fail callback function
+
+**Detail:**  
+Tests if an audio file is currently paused. If the audio file has not previously been issued a play command via playAudioWithId this test will fail.
+
+#audioWithIdShouldResumePlayback
+**Params:**
+* **anId**  
+Unique string identifier referencing the audio file.
+* **aSuccessCallback**
+Success callback.
+* **aFailureCallback**  
+Error/fail callback function
+
+**Detail:**  
+Tests if a previously paused audio file should be resumed. The criteria are: If the currentTime of the AVPlayer instance is > 0 and the audio has previously been issued a pauseAudioWithId command the method will return successful.
+
+#removeAllAudio
+**Params:**
+* **anId**  
+Unique string identifier referencing the audio file.
+* **aSuccessCallback**
+Success callback.
+* **aFailureCallback**  
+Error/fail callback function
+
+**Detail:**  
+Purges all preloaded audio files and empties the dictionary of registered unique id's
 
 ```javascript
 
