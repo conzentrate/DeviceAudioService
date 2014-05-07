@@ -46,9 +46,12 @@ Calling the 'addAudioWithIdAndUrl' method could then look like:
 
 #API methods:
 **addAudioWithIdAndUrl**: function ( anId, aUrl, aSuccessCallback, aFailureCallback )
+
 	params: anId - a unique string identifier referencing the audio file
 			aUrl - the Url to the audio file to be preloaded. The file will be played back via the AVPlayer iOS Class
+
 			aSuccessCallback - success callback function
+
 			aFailureCallback - error/fail callback function
 	detail:	
 			The method will call the success callback when the iOS Cocoa AVPlayerStatusReadyToPlay status is triggered. Before attempting to play back the audio file You should wait for the success callback. The method will call the failure callback when the AVPlayerStatusFailed is triggered.
