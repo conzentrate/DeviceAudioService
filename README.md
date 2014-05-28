@@ -1,6 +1,6 @@
 cordova-plugin-deviceaudioservice
 
-# DeviceAudioService plugin Plugin #
+# DeviceAudioService Plugin #
 ---------------------------
 This is the DeviceAudioService Phonegap/Cordova Plugin for iOS.  
 
@@ -16,4 +16,4 @@ It's recommended to use cordova command line tool:
 
 cordova plugin add https://github.com/conzentrate/DeviceAudioService.git
 
-README.txt in src folder provides further details.
+README.txt in docs and src folders provides further details.
