@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-ng-controller="appCtrl">
+<head>
+</head>
+<body>
+
+	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+
+	<script>
+
+		//
+		// This provides an example of how one may use the DeviceAudioService
+		// The example is for illustrative purposes only
+		// and is not intended for production use.
+		//
+		document.addEventListener('deviceready', function() {
+
+			//
+			// 1. First we register an audio file we wish to play back
+			//
+			cordova.exec(
+
+				//
+				// Register the callback handler
+				// This will be called when the Cocoa AVPlayerStatusReadyToPlay status is triggered
+				//
+				function(data) {
+
+					//
+					// 2. Then we can play back the registered audio file
+					//
+					cordova.exec(
+						// Register the callback handler
+						function(data) {
+							// Stuff to do on successfull callback
+						},
+						// Register the errorHandler
+						function(err) {
+							// Stuff to do when an error occurs.
+						},
+						'DeviceAudioService',
+						'playAudioWithId',
+						[ 'mySound' ]
+					);
+
+
+				},
+				// Register the errorHandler
+				function(err) {
+					// Stuff to do when an error occurs.
+				},
+				'DeviceAudioService',
+				'addAudioWithIdAndUrl',
+				[ 'mySound','http://foo.com/bar.mp3' ]
+			);
+
+		}, false);
+	</script>
+
+</body>
+</html>
