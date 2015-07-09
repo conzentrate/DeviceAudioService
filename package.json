@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-deviceaudioservice",
+  "version": "1.0.0",
+  "description": "Support for simultaneous playback of multiple Url based audio sources",
+  "cordova": {
+    "id": "com.conzentrate.cordova.plugin.deviceaudioservice",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conzentrate/DeviceAudioService.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.3.0"
+    }
+  ],
+  "author": "Conzentrate A/S",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/conzentrate/DeviceAudioService/issues"
+  },
+  "homepage": "https://github.com/conzentrate/DeviceAudioService#readme"
+}

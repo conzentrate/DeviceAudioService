@@ -2,9 +2,9 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="com.conzentrate.cordova.plugin.deviceaudioservice"
-        version="1.0">
-      
-    <name>DeviceAudioService</name>
+        version="1.0.0">
+
+    <name>cordova-plugin-deviceaudioservice</name>
 	<description>Support for simultaneous playback of multiple Url based audio sources</description>
 	<author>Developed by Conzentrate ApS</author>
 	<license>MIT</license>
@@ -13,7 +13,7 @@
 	</engines>
 
      <!-- ios -->
-     <platform name="ios">    
+     <platform name="ios">
 
         <js-module src="www/DeviceAudioService.js" name="DeviceAudioService">
             <clobbers target="DeviceAudioService" />
@@ -24,12 +24,12 @@
                  <param name="ios-package" value="DeviceAudioService" />
              </feature>
          </config-file>
-         
+
          <header-file src="src/ios/DeviceAudioService.h" />
          <source-file src="src/ios/DeviceAudioService.m" />
          <header-file src="src/ios/DeviceAudioServiceAudioItem.h" />
          <source-file src="src/ios/DeviceAudioServiceAudioItem.m" />
-         
+
 	</platform>
-          
+
 </plugin>

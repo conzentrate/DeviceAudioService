@@ -1,7 +1,12 @@
 
 Examples on using the DeviceAudioService plugin.
 
-To be updated.
+#Including the plugin via the PhoneGap Build config.xml
+You may include the plugin using the following snippet:
+```
+<gap:plugin name="cordova-plugin-deviceaudioservice" source="npm" version="1.0.0" />
+```
+
 
 #Calling the API methods:
 You may call each of the API methods below by using the following template:
